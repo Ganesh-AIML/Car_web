@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | DriveEase</title>
+    <link rel="stylesheet" href="../public/styles/contactus_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">DriveEase</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#car-inventory-section">Rent Car</a></li>
+                <li><a href="#" class="active">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login">Log In</button>
+            <button class="signup">Sign Up</button>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2>Just say Hello!</h2>
+                <p>Let us know more about you!</p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Mail">
+                        <input type="tel" placeholder="Phone">
+                    </div>
+                    <textarea placeholder="Message"></textarea>
+                    <button class="submit-btn">SUBMIT</button>
+                </form>
+            </div>
+            
+            <div class="vertical-line"></div>
+    
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><span>Address:</span><br>Citizen Society, A-8, A-Wing<br> Naigaon, 401208 <br> India</p>
+                <p><span>Call Us:</span><br>+91 8591100764</p>
+                <p><span>Available:</span><br>Monday - Friday <br> 08:00 am - 05:00 pm</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2 class="brand">DriveEase</h2>
+                <p>Your trusted partner in car rentals, ensuring the best experience for your journey.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Account</h3>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Billing</a></li>
+                    <li><a href="#">Notifications</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 All Rights Reserved by GANESH</p>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
+    let links = document.querySelectorAll(".nav-link");
+
+    links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+});
+
+</script>
+</body>
+</html>

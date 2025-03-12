@@ -14,10 +14,9 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#car-inventory-section">Rent Car</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="./view/rent_car.html">Rent Car</a></li>
+                   <li><a href="./view/contact_page.html">Contact Us</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog</a></li>
             </ul>
         </nav>
         <div class="auth-buttons">
@@ -31,7 +30,7 @@
         <div class="hero-text">
             <h1>Easy And Fast Way <br>To <span>Rent</span> Your Car</h1>
             <p>Discover the easiest and fastest way to rent your dream car with just a few clicks. Whether you need a ride for business, travel, or adventure, we offer a seamless booking experience, competitive prices, and a wide range of vehicles to choose from. Book now and hit the road with confidence!</p>
-            <button class="rent-btn">Rent Car</button>
+            <button class="rent-btn" onclick="window.location.href='./view/rent_car.html';">Rent Car</button>
         </div>
         <div class="hero-image">
             <img src="public/images/BMW_car.png" alt="Car">
@@ -106,6 +105,67 @@
                     <a href="#" class="buy-btn">Book Now</a>
                 </div>
                 <!-- Add more car cards as needed -->
+
+                <div class="car-card">
+                    <img src="public/images/mercedes1.png" alt="Car 3">
+                    <h3>Mercedes-Benz C-Class</h3>
+                    <p class="rating">⭐⭐⭐⭐⭐ <span class="reviews">(12K Reviews)</span></p>
+                    <div class="attribute">
+                        <i class='fas fa-gas-pump'></i>21 kmpl , <i class='fas fa-chair'></i>6 seat
+                    </div>
+                    <p class="price">3.80 Crore</p>
+                    <a href="#" class="buy-btn">Book Now</a>
+                </div>
+                <div class="car-card">
+                    <img src="public/images/mercedes1.png" alt="Car 3">
+                    <h3>Mercedes-Benz C-Class</h3>
+                    <p class="rating">⭐⭐⭐⭐⭐ <span class="reviews">(12K Reviews)</span></p>
+                    <div class="attribute">
+                        <i class='fas fa-gas-pump'></i>21 kmpl , <i class='fas fa-chair'></i>6 seat
+                    </div>
+                    <p class="price">3.80 Crore</p>
+                    <a href="#" class="buy-btn">Book Now</a>
+                </div>
+                <div class="car-card">
+                    <img src="public/images/mercedes1.png" alt="Car 3">
+                    <h3>Mercedes-Benz C-Class</h3>
+                    <p class="rating">⭐⭐⭐⭐⭐ <span class="reviews">(12K Reviews)</span></p>
+                    <div class="attribute">
+                        <i class='fas fa-gas-pump'></i>21 kmpl , <i class='fas fa-chair'></i>6 seat
+                    </div>
+                    <p class="price">3.80 Crore</p>
+                    <a href="#" class="buy-btn">Book Now</a>
+                </div>
+                <div class="car-card">
+                    <img src="public/images/mercedes1.png" alt="Car 3">
+                    <h3>Mercedes-Benz C-Class</h3>
+                    <p class="rating">⭐⭐⭐⭐⭐ <span class="reviews">(12K Reviews)</span></p>
+                    <div class="attribute">
+                        <i class='fas fa-gas-pump'></i>21 kmpl , <i class='fas fa-chair'></i>6 seat
+                    </div>
+                    <p class="price">3.80 Crore</p>
+                    <a href="#" class="buy-btn">Book Now</a>
+                </div>
+                <div class="car-card">
+                    <img src="public/images/mercedes1.png" alt="Car 3">
+                    <h3>Mercedes-Benz C-Class</h3>
+                    <p class="rating">⭐⭐⭐⭐⭐ <span class="reviews">(12K Reviews)</span></p>
+                    <div class="attribute">
+                        <i class='fas fa-gas-pump'></i>21 kmpl , <i class='fas fa-chair'></i>6 seat
+                    </div>
+                    <p class="price">3.80 Crore</p>
+                    <a href="#" class="buy-btn">Book Now</a>
+                </div>
+                <div class="car-card">
+                    <img src="public/images/mercedes1.png" alt="Car 3">
+                    <h3>Mercedes-Benz C-Class</h3>
+                    <p class="rating">⭐⭐⭐⭐⭐ <span class="reviews">(12K Reviews)</span></p>
+                    <div class="attribute">
+                        <i class='fas fa-gas-pump'></i>21 kmpl , <i class='fas fa-chair'></i>6 seat
+                    </div>
+                    <p class="price">3.80 Crore</p>
+                    <a href="#" class="buy-btn">Book Now</a>
+                </div>
             </div>
         </div>
     </section>
@@ -183,7 +243,8 @@
             </div>
         </div>
     </section>
-
+    
+    
 
     <footer class="footer">
         <div class="footer-container">
@@ -242,6 +303,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        const inventory = document.querySelector('.inventory');
 
+// Duplicate the content
+inventory.innerHTML += inventory.innerHTML;
+
+let scrollAmount = 0;
+
+function scrollInventory() {
+    scrollAmount += 1; // Speed of scroll
+    if (scrollAmount >= inventory.scrollWidth / 2) {
+        scrollAmount = 0; // Reset seamlessly when half is scrolled (original content width)
+    }
+    inventory.style.transform = `translateX(-${scrollAmount}px)`;
+    requestAnimationFrame(scrollInventory);
+}
+
+scrollInventory();
+</script>
 </body>
 </html>
